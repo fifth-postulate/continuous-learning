@@ -2,6 +2,7 @@ module Robot exposing (..)
 
 -- Model
 
+
 type alias Robot =
     { position : Point
     , heading : Heading
@@ -20,3 +21,16 @@ type Heading
     | South
     | East
 
+
+
+-- Update
+
+
+type Message
+    = Step
+    | Turn Direction
+
+
+type Direction
+    = Clockwise
+    | AntiClockwise
