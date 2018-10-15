@@ -48,7 +48,7 @@
 
 # [Elm](https://elm-lang.org/docs/from-javascript)
 
-* functional language
+* Functional language
 * Strongly Typed
 * Immutable
 * Compiled
