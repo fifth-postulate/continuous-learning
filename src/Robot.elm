@@ -2,6 +2,7 @@ module Robot exposing (Direction(..), Heading(..), Message(..), Point, Robot, an
 
 import Browser
 import Html exposing (Html)
+import Html.Events as Event
 
 
 main =
@@ -94,7 +95,7 @@ towards heading ({ x, y } as point) =
 
 clockwise : Robot -> Robot
 clockwise robot =
-    { robot | heading = left robot.heading }
+    { robot | heading = right robot.heading }
 
 
 left : Heading -> Heading
@@ -115,7 +116,7 @@ left heading =
 
 antiClockwise : Robot -> Robot
 antiClockwise robot =
-    { robot | heading = right robot.heading }
+    { robot | heading = left robot.heading }
 
 
 right : Heading -> Heading
@@ -142,9 +143,9 @@ view : Robot -> Html Message
 view robot =
     Html.div []
         [ Html.div []
-            [ Html.button [] [ Html.text "↺" ]
-            , Html.button [] [ Html.text "↑" ]
-            , Html.button [] [ Html.text "↻" ]
+            [ Html.button [ Event.onClick <| Turn AntiClockwise ] [ Html.text "↺" ]
+            , Html.button [ Event.onClick <| Step ] [ Html.text "↑" ]
+            , Html.button [ Event.onClick <| Turn Clockwise ] [ Html.text "↻" ]
             ]
         , Html.div []
             [ Html.div [] [ Html.span [] [ Html.text (Debug.toString robot) ] ]
