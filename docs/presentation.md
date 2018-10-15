@@ -34,3 +34,116 @@
 ## 1893
 # Fear of not knowing
 
+---
+
+<img src="image/aww-yiss.jpg" alt="Aww Yiss" height="640px">
+
+???
+
+# Don't be afraid of not knowing
+# It is OK to not know everything
+# Expect to learn everyday
+
+---
+
+# [Elm](https://elm-lang.org/docs/from-javascript)
+
+* functional language
+* Strongly Typed
+* Immutable
+* Compiled
+* Module-View-Update
+
+???
+
+# Let's compare JavaScript & Elm
+
+---
+
+# Functional Language
+
+```javascript
+function add(a, b) {
+  return a + b
+}
+```
+
+--
+
+```elm
+add a b =
+  a + b
+```
+
+---
+
+# Strong Typed
+
+
+```javascript
+'a' + 1
+```
+
+--
+
+```elm
+'a' + 1
+```
+
+---
+
+# Immutable
+
+```javascript
+let a = 4
+const b = 3
+
+a = b
+b = a
+```
+
+--
+
+```elm
+a = 4
+b = 3
+```
+
+--
+
+Except in the REPL
+
+---
+
+# Compiled to JavaScript
+
+## JavaScript
+
+Problems found at runtime
+
+--
+
+## Elm
+
+A lot of problems found at compile time
+
+---
+
+# Elm Architecture
+
+## demo
+
+---
+
+# Summary
+
+### Embrace the feeling of not knowing
+
+--
+
+### If you like, take a closer look at Elm
+
+--
+
+## Code at 
+[https://github.com/fifth-postulate/continuous-learning](https://github.com/fifth-postulate/continuous-learning)
