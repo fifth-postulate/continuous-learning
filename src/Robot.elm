@@ -1,8 +1,10 @@
-module Robot exposing (Direction(..), Heading(..), Message(..), Point, Robot, antiClockwise, clockwise, left, main, right, step, towards, update, view)
+module Robot exposing (main)
 
 import Browser
 import Html exposing (Html)
 import Html.Events as Event
+import Svg exposing (Svg, circle, g)
+import Svg.Attributes exposing (cx, cy, fill, height, r, transform, viewBox, width)
 
 
 main =
@@ -149,5 +151,26 @@ view robot =
             ]
         , Html.div []
             [ Html.div [] [ Html.span [] [ Html.text (Debug.toString robot) ] ]
+            ]
+        , viewSvg 10 robot
+        ]
+
+
+viewSvg : Int -> Robot -> Svg Message
+viewSvg scale robot =
+    let
+        x =
+            robot.position.x
+                * scale
+                |> String.fromInt
+
+        y =
+            robot.position.y
+                * scale
+                |> String.fromInt
+    in
+    Svg.svg [ width "640", height "640", viewBox "-320 -320 640 640" ]
+        [ Svg.g [ transform "scale(1 -1)" ]
+            [ Svg.circle [ cx x, cy y, r "5", fill "black" ] []
             ]
         ]
