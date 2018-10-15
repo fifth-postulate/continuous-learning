@@ -22,3 +22,15 @@
 ## Software consultant/Software developer
 ## Trainer
 ## Teacher
+
+---
+
+<img src="image/the-scream.jpg" alt="The Scream" height="640px">
+
+???
+
+# The Scream
+## Edvard Munch
+## 1893
+# Fear of not knowing
+
