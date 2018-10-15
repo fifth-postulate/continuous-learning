@@ -1,5 +1,9 @@
 module Robot exposing (..)
 
+import Html exposing (Html)
+
+
+
 -- Model
 
 
@@ -112,3 +116,21 @@ right heading =
 
         East ->
             South
+
+
+
+-- View
+
+
+view : Robot -> Html Message
+view robot =
+    Html.div []
+        [ Html.div []
+            [ Html.button [] [ Html.text "↺" ]
+            , Html.button [] [ Html.text "↑" ]
+            , Html.button [] [ Html.text "↻" ]
+            ]
+        , Html.div []
+            [ Html.div [] [ Html.span [] [ Html.text (Debug.toString robot) ] ]
+            ]
+        ]
