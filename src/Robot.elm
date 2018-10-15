@@ -1,6 +1,22 @@
-module Robot exposing (..)
+module Robot exposing (Direction(..), Heading(..), Message(..), Point, Robot, antiClockwise, clockwise, left, main, right, step, towards, update, view)
 
+import Browser
 import Html exposing (Html)
+
+
+main =
+    Browser.sandbox
+        { init = startRobot
+        , update = update
+        , view = view
+        }
+
+
+startRobot : Robot
+startRobot =
+    { position = { x = 0, y = 0 }
+    , heading = North
+    }
 
 
 
