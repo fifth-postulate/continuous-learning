@@ -1,2 +1,2 @@
 # Continuous Learning
-A presentation for the Code Academy of Pittsburgh.
+A presentation for the Academy of Pittsburgh.
